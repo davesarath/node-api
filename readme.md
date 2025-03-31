@@ -16,7 +16,7 @@ https://node-api-malm.onrender.com/api
 ### **1. User Registration**
 **Endpoint:**
 ```
-POST /users
+POST /register
 ```
 **Request Body:**
 ```json
