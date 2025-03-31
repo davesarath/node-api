@@ -5,6 +5,11 @@
 http://localhost:3000/api
 ```
 
+## Demo URL
+```
+https://node-api-malm.onrender.com/api
+```
+
 ---
 ## **Authentication APIs**
 
