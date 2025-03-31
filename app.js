@@ -74,7 +74,7 @@ const initializeDatabase = () => {
 initializeDatabase();
 
 // **User Registration API**
-app.post('/api/users', users.register);
+app.post('/api/register', users.register);
 
 // **User Login API** - Return JWT Token on success
 app.post('/api/login', users.login);
