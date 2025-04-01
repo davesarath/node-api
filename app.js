@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcryptjs');
+const cors = require('cors');
 const jwt = require('jsonwebtoken');
 const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
@@ -11,9 +12,13 @@ const products = require('./models/products');
 const app = express();
 const db = new sqlite3.Database('./database.db');
 const PORT = process.env.PORT || 3000;
-const JWT_SECRET = 'your_jwt_secret_key';
+const JWT_SECRET = process.env.JWT_SECRET || 'g164f6s4t3455434666sdr2r354t634456344wer631';
 
 app.use(bodyParser.json());
+
+
+// Allow requests from your frontend
+app.use(cors({ origin: 'http://localhost:4200', credentials: true }));
 
 // **Helper function to validate JWT token**
 const authenticateToken = (req, res, next) => {
